@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <meta charset="utf-8"/>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <title>TP1</title>
+       <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+       <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+    </head>
+
+<body>
+    <ion-app>
+        <ion-header>
+            <ion-toolbar color="primary">Gestionnaire de dépenses</ion-toolbar>
+        </ion-header>
+
+        <ion-content>
+            <ion-grid>
+                <ion-row>
+                <ion-col size-md="6" offset-md="3">
+                    <ion-card>
+                        <ion-card-header>
+                            <ion-card-title> Nouvelle dépense</ion-card-title>
+                            </ion-card-header>
+        
+                            <ion-card-content>
+                                <ion-item>
+                                   <ion-label position="floating">Intitulé de la dépense</ion-label>
+                                   <ion-input id="intitule" type="text"></ion-input>
+                                </ion-item>
+        
+                                <ion-item>
+                                   <ion-label position="floating">Somme de la dépense</ion-label>
+                                   <ion-input id="somme" type="number"></ion-input>
+                                </ion-item>
+
+                                <div class="ion-text-end ion-margin-vertical">
+                                  <ion-button id="btn-effacer" color="danger" fill="outline">Effacer <ion-icon slot="start" name="close-outline"></ion-icon></ion-button>
+                                  <ion-button id="btn-ajouter" color="success" fill="outline"><ion-icon slot="end" name="add-outline"></ion-icon> Ajouter</ion-button>
+                                </div>
+
+                            </ion-card-content>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size-md="6" offset-md="3">
+                        <ion-list id="list-app"></ion-list>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size-md="6" offset-md="3">
+                        <strong id="total-dep">Total des dépenses : <span id="allDep"></span></strong>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-content>
+    </ion-app>
+    <script src="app.js"></script>
+
+</body>
+</html>
